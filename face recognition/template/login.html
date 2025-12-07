@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Finance Management</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            max-width: 400px;
+            margin: auto;
+        }
+
+        input {
+            margin-bottom: 10px;
+            padding: 5px;
+        }
+
+        button {
+            padding: 8px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        #balance {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Personal Finance Management</h1>
+
+    <form id="financeForm">
+        <label for="income">Income:</label>
+        <input type="number" id="income" placeholder="Enter income amount" required>
+
+        <label for="expense">Expense:</label>
+        <input type="number" id="expense" placeholder="Enter expense amount" required>
+
+        <button type="button" onclick="addTransaction()">Add Transaction</button>
+    </form>
+
+    <div id="balance">Current Balance: $0</div>
+
+    <script>
+        let balance = 0;
+
+        function addTransaction() {
+            const income = parseFloat(document.getElementById('income').value) || 0;
+            const expense = parseFloat(document.getElementById('expense').value) || 0;
+
+            balance += (income - expense);
+
+            document.getElementById('balance').textContent = `Current Balance: $${balance.toFixed(2)}`;
+        }
+    </script>
+</body>
+</html>
