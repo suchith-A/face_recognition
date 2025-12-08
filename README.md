@@ -3,7 +3,8 @@
 A lightweight Flask + OpenCV + face_recognition app that uses your webcam for real-time face recognition and records attendance.
 This project automates marking attendance, saving recognized / unknown face images, and exporting per-session CSVs — all from a simple command you run locally.# face_recognition
 
-Quick Demo (Example)
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+**Quick Demo**
 ======== FACE RECOGNITION ATTENDANCE ========
 
 ✅ Loaded classes: ['alice', 'bob']
@@ -20,21 +21,19 @@ When a known face appears:
 Press 'q' in the window to stop and return to the Flask route.
 Visit: http://127.0.0.1:5000/open-csv  ->  downloads session CSV
 
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 **🚀 Features** 
 
 **🧾 Generate Attendance** — Detect faces live and mark attendance automatically.
-
 **📜 View Previous Invoices** — Persistent Attendance.csv stores recognized names & times
-
 **🔎 Search / Filter** — search through CSVs by name or timestamp.
-
 **💾 Save Images** — Saves cropped images for recognized faces (recognized_faces/) and unknown faces (unknown_faces/).
-
 **🗑️ Delete Old Records** — delete or prune old images / CSV rows.
-
 **⚙️ Menu-driven / Simple Controls** — Use the OpenCV UI and Flask endpoints to control sessions.
 
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 **📥 Installation & Setup**
+
 **1️⃣ Clone the Repository**
 git clone https://github.com/<your-username>/face-recognition-attendance.git
 cd face-recognition-attendance
@@ -65,6 +64,7 @@ numpy>=1.21
 pandas>=1.3
 face_recognition>=1.3.0
 
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 **🖥️ Running the Application**
 python app.py
 
